@@ -1,0 +1,43 @@
+\section{Preliminaries}
+
+We begin by formally stating the generalized form of the Erdős–Straus-type conjecture we propose:
+
+\begin{conjecture}[Generalized Erdős–Straus Form]
+For any integer $k \in \mathbb{N}$, the rational expression $\frac{2k}{n}$ can be represented as a sum of $(k+1)$ unit fractions. That is, for every pair $(k, n) \in \mathbb{N}^2$ with $n \geq 2$, there exists a set of natural numbers $\{ x_0, x_1, \dots, x_k \} \subset \mathbb{N}$ such that:
+\[
+\frac{2k}{n} = \frac{1}{x_0} + \frac{1}{x_1} + \cdots + \frac{1}{x_k} = \sum_{i=0}^{k} \frac{1}{x_i}.
+\]
+\end{conjecture}
+
+We now justify the necessity of the condition $n \geq 2$ by establishing the following lemma:
+
+\begin{lemma}
+For every $k \in \mathbb{N}$, the equation in Conjecture~1 admits a solution when $n = 2$.
+\end{lemma}
+
+\begin{proof}
+Substituting $n = 2$ into the conjectured identity, we aim to express:
+\[
+\frac{2k}{2} = k
+\]
+as a sum of $k+1$ unit fractions of natural numbers.
+
+We construct the following multiset $S$ of size $k+1$:
+\[
+S = \underbrace{\{ 1, 1, \dots, 1 \}}_{k-1\text{ times}} \cup \{ 2, 2 \}.
+\]
+
+Clearly, the sum of the reciprocals of the elements in $S$ is:
+\[
+\left( \sum_{i=1}^{k-1} \frac{1}{1} \right) + \frac{1}{2} + \frac{1}{2} = (k-1) + \frac{1}{2} + \frac{1}{2} = k.
+\]
+
+Hence, the equality
+\[
+k = \sum_{i=0}^{k} \frac{1}{x_i}
+\]
+holds true for $x_i \in S$, satisfying the conjecture for $n = 2$. This completes the proof.
+\end{proof}
+
+One may naturally ask that, \emph{if by Lemma 1, the conjecture holds for $n=2$, then does it also holds for any $n \geq 2, \in \mathbb{N}$?}
+This is specifically what builds the \emph{Conjecture 1}.
